@@ -1,15 +1,30 @@
+
 .row {
-    border: 2px solid black;
-    display: inline-block;  */
-    
-    height: 4px; 
-    width: 4px; 
+    display: flex;
+    /* float: left; */
 }
 .cell{
-    /* display: inline-block;  */
-    height: 4px;
-    width: 4px;
-    border: 1px solid red;
-    float: left;
+    /* display: inline-block;   */
+    /* display: center; */
+    height: 10px;
+    width: 10px;
+    border: 1px solid red; 
+    color: blue; 
+    /* float: left; */
+}
+.legend{
+    padding: 100px;
+}
+.blankGrid{
+    border: 1px solid black;
+    
 }
 
+.gridBox {
+    margin: 50px;
+}
+
+.swatchBox {
+    
+    width: 100%;
+}
