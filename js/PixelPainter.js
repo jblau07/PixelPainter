@@ -30,4 +30,4 @@
      }
  }
 }
-createGrid(3,3);
+createGrid(40,30);

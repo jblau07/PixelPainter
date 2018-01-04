@@ -1,11 +1,15 @@
 .row {
     border: 2px solid black;
+    display: inline-block;  */
     
+    height: 4px; 
+    width: 4px; 
 }
 .cell{
-    display: inline-block;
-    height: 40px;
-    width: 40px;
+    /* display: inline-block;  */
+    height: 4px;
+    width: 4px;
     border: 1px solid red;
+    float: left;
 }
 
