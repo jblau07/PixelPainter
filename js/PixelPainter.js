@@ -8,12 +8,11 @@ let colors = ['grey', 'black', '#061247', '#2a4dcc', '#04dce8', '#00c66a', 'gree
 let colorMemory;
 
 let swatchBox = document.createElement("div");
-//swatchBox.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
 swatchBox.className = "swatchBox";
 ppCanvas.appendChild(swatchBox);
 
 
-// creat swatch grid
+// create swatch grid
 function createSwatchGrid(x, y, element, ) {
     let counter = 0;
 
@@ -46,23 +45,18 @@ gridBox.addEventListener("mouseup", function () {
     console.log("mouseup")
 });
 
+gridBox.addEventListener("click", function (){
+    if (event.target.classList.contains("cell2")) 
+        event.target.style.backgroundColor = colorMemory;
+    });
+
 gridBox.addEventListener("mouseover", function () {
     if (isDown === true && event.target.classList.contains("cell2")) {
         event.target.style.backgroundColor = colorMemory;
         console.log("paint")
     }
 });
-// if (myGrid.classList.contains("cell2")) {
-//     event.target.style.backgroundColor = colorMemory ;     
-// }
 
-
-// gridBox.addEventListener("drag", function () {
-//     if (event.target.classList.contains("cell2")) {
-//         event.target.style.backgroundColor = colorMemory;
-//         console.log("hello3")
-//     }
-// });
 // create blank grid
 function createBlankGrid(x, y, element) {
     let counter = 0;
