@@ -33,7 +33,6 @@ function createSwatchGrid(x, y, element, ) {
 };
 
 // function to interact with swatch
-// let grid = swatchBox.querySelectorAll('.row .cell');
 swatchBox.addEventListener("click", function () {
     colorMemory = event.target.style.backgroundColor;
     console.log("swatch")
