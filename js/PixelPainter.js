@@ -1,5 +1,5 @@
 const ppCanvas = document.getElementById("pixelPainter");
-
+let isDown = false;
 let gridBox = document.createElement("div");
 gridBox.className = "gridBox";
 ppCanvas.appendChild(gridBox);
@@ -36,19 +36,28 @@ function createSwatchGrid(x, y, element, ) {
 // let grid = swatchBox.querySelectorAll('.row .cell');
 swatchBox.addEventListener("click", function () {
     colorMemory = event.target.style.backgroundColor;
-    console.log("hello")
+    console.log("swatch")
+});
+gridBox.addEventListener("mousedown", function () {
+    isDown = true; 
+    console.log("mousedown")
+});
+gridBox.addEventListener("mouseup", function () {
+    isDown = false; 
+    console.log("mouseup")
 });
 
 gridBox.addEventListener("mouseover", function () {
-    if (event.target.classList.contains("cell2")) {
+    if (isDown === true && event.target.classList.contains("cell2")) {
         event.target.style.backgroundColor = colorMemory;
+        console.log("paint")
     }
-
-    // if (myGrid.classList.contains("cell2")) {
-    //     event.target.style.backgroundColor = colorMemory ;     
-    // }
-    console.log("hello2")
 });
+// if (myGrid.classList.contains("cell2")) {
+//     event.target.style.backgroundColor = colorMemory ;     
+// }
+
+
 // gridBox.addEventListener("drag", function () {
 //     if (event.target.classList.contains("cell2")) {
 //         event.target.style.backgroundColor = colorMemory;
