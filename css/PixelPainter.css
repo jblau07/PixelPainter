@@ -10,8 +10,21 @@
     height: 10px;
     width: 10px;
     border: 1px solid red; 
-    color: blue; 
-    /* float: left; */
+     
+    /* float: left; */}
+.row2{
+        display: flex;
+        justify-content: center
+        /* float: left; */
+    }
+.cell2{
+        /* display: inline-block;   */
+        /* display: center; */
+        height: 10px;
+        width: 10px;
+        border: 1px solid red; 
+         
+        /* float: left; */
 }
 .legend{
     padding: 100px;

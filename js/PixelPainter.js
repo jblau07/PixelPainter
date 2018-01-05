@@ -5,7 +5,7 @@ gridBox.className = "gridBox";
 ppCanvas.appendChild(gridBox);
 
 let colors = ['blue', 'red', 'green', 'yellow'];
-let colors2 = "white";
+
 
 let swatchBox = document.createElement("div");
 //swatchBox.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
@@ -13,8 +13,8 @@ swatchBox.className = "swatchBox";
 ppCanvas.appendChild(swatchBox);
 
 
-
-function createGrid(x, y, element, bgColor) {
+// creat swatch grid
+function createSwatchGrid(x, y, element,) {
     let counter = 0;
     
     for (let i = 1; i <= x; i++) {
@@ -24,23 +24,41 @@ function createGrid(x, y, element, bgColor) {
         for (let j = 1; j <= y; j++) {
             let cell = document.createElement("div");
             cell.className = "cell";
-            cell.style.backgroundColor = bgColor[counter ++];
+            cell.style.backgroundColor = colors[counter ++];
             row.appendChild(cell);
 
         }
         element.appendChild(row);
     }
 };
+// create blank grid
+function createBlankGrid(x, y, element) {
+    let counter = 0;
+    
+    for (let i = 1; i <= x; i++) {
+        let row2 = document.createElement("div");
+        row2.className = "row2";
 
-createGrid(2, 2, swatchBox, colors);
+        for (let j = 1; j <= y; j++) {
+            let cell2 = document.createElement("div");
+            cell2.className = "cell2";
+            cell2.style.backgroundColor = "blue";
+            row2.appendChild(cell2);
 
-createGrid(30, 30, gridBox, colors2);
+        }
+        element.appendChild(row2);
+    }
+};
+
+createSwatchGrid(2, 2, swatchBox);
+
+createBlankGrid(30, 30, gridBox);
 
 
 
 //function fillSwatchBox (container){}
 
-let indivColor = swatchBox.getElementsByClassName("cell");
+// let indivColor = swatchBox.getElementsByClassName("cell");
 
 // function createPalette () {
 //     indivColor.forEach(function(cell, index){
@@ -57,8 +75,13 @@ eraseButton.innerHTML = "Erase";
 ppCanvas.appendChild(eraseButton);
 
 eraseButton.addEventListener("click", function () {
-    alert("heyyy");
+    console.log("erase something")    
+    // let myGrid = gridBox.querySelectorAll('.row2 .cell2');
+    // for (let index = 0; index < myGrid.length; index++) {
+    //     myGrid[index].style.backgroundColor = 'white';
+    
 });
+
 
 
 let clearButton = document.createElement("button");
@@ -66,5 +89,10 @@ clearButton.innerHTML = "Clear";
 ppCanvas.appendChild(clearButton);
 
 clearButton.addEventListener("click", function () {
-    alert("heyyy");
+    console.log('hello');
+   let myGrid = gridBox.querySelectorAll('.row2 .cell2');
+    for (let index = 0; index < myGrid.length; index++) {
+        myGrid[index].style.backgroundColor = 'white';
+        
+    } 
 });
