@@ -59,8 +59,6 @@ gridBox.addEventListener("mouseover", function () {
 
 // create blank grid
 function createBlankGrid(x, y, element) {
-	let counter = 0;
-
 	for (let i = 1; i <= x; i++) {
 		let row2 = document.createElement("div");
 		row2.className = "row2";
