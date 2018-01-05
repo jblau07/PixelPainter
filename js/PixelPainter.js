@@ -4,7 +4,7 @@ let gridBox = document.createElement("div");
 gridBox.className = "gridBox";
 ppCanvas.appendChild(gridBox);
 
-let colors = ['black','grey','blue','teal', 'green', 'yellow','orange','red','pink','violet','purple', 'brown'];
+let colors = ['grey', 'black', '#061247', '#2a4dcc', '#04dce8', '#00c66a', 'green', '#54ff00', 'yellow', 'orange', '#f76518', '#ff1900', '#d80020', '#ff0054', '#ff05ab', '#f605ff', 'violet', '#c87cff', '#7a46e2', '#5a0cf7'];
 let colorMemory;
 
 let swatchBox = document.createElement("div");
@@ -49,8 +49,12 @@ gridBox.addEventListener("mouseover", function () {
     // }
     console.log("hello2")
 });
-
-
+// gridBox.addEventListener("drag", function () {
+//     if (event.target.classList.contains("cell2")) {
+//         event.target.style.backgroundColor = colorMemory;
+//         console.log("hello3")
+//     }
+// });
 // create blank grid
 function createBlankGrid(x, y, element) {
     let counter = 0;
@@ -70,9 +74,9 @@ function createBlankGrid(x, y, element) {
     }
 };
 
-createSwatchGrid(3, 4, swatchBox);
+createSwatchGrid(2, 10, swatchBox);
 
-createBlankGrid(30, 30, gridBox);
+createBlankGrid(30, 100, gridBox);
 
 let eraseButton = document.createElement("button");
 eraseButton.id = "eraseButton"
@@ -95,6 +99,12 @@ clearButton.addEventListener("click", function () {
     let myGrid = gridBox.querySelectorAll('.row2 .cell2');
     for (let index = 0; index < myGrid.length; index++) {
         myGrid[index].style.backgroundColor = 'white';
-
     }
+});
+// easterEggs
+eraseButton.addEventListener("dblclick", function () {
+    window.location.href = "https://github.com/jblau07";
+});
+clearButton.addEventListener("dblclick", function () {
+    window.location.href = "https://github.com/DODHI5";
 });
