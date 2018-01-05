@@ -4,7 +4,7 @@ let gridBox = document.createElement("div");
 gridBox.className = "gridBox";
 ppCanvas.appendChild(gridBox);
 
-let colors = ['blue', 'red', 'green', 'yellow', 'purple', 'orange', 'black', 'brown'];
+let colors = ['black','grey','blue','teal', 'green', 'yellow','orange','red','pink','violet','purple', 'brown'];
 let colorMemory;
 
 let swatchBox = document.createElement("div");
@@ -70,7 +70,7 @@ function createBlankGrid(x, y, element) {
     }
 };
 
-createSwatchGrid(2, 4, swatchBox);
+createSwatchGrid(3, 4, swatchBox);
 
 createBlankGrid(30, 30, gridBox);
 
